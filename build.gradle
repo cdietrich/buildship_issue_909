@@ -1,0 +1,28 @@
+
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+	compile 'log4j:log4j:1.2.17'
+	testCompile 'org.junit.jupiter:junit-jupiter-api:5.1.0'
+	testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+}
+
+sourceSets {
+		main {
+			java.srcDirs = []
+			resources.srcDirs = []
+		}
+		test {
+			java.srcDirs = ['src', 'src-gen']
+			resources.srcDirs = ['src', 'src-gen']
+		}
+}
